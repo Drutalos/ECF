@@ -33,12 +33,12 @@
     <h2>Notre équipe</h2>
     <div class="team-members">
         <div class="member">
-            <img src="julie.jpg" alt="Julie" class="member-photo">
+            <img src="assets/img/julie.jpg" alt="Julie" class="member-photo">
             <h3>Julie</h3>
             <p>Chef passionnée, toujours à l’écoute de vos envies pour créer des menus savoureux et innovants.</p>
         </div>
         <div class="member">
-            <img src="jose.jpg" alt="José" class="member-photo">
+            <img src="assets/img/jose.jpg" alt="José" class="member-photo">
             <h3>José</h3>
             <p>Expert culinaire avec 25 ans d’expérience, garant de la qualité et du professionnalisme de chaque
                 prestation.</p>

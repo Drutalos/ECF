@@ -1,0 +1,18 @@
+# Dépendances Composer
+vendor/
+composer.lock
+
+# Fichiers système Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Configuration locale (contient des mots de passe)
+inc/config.php
+
+# Uploads utilisateurs (si tu en as)
+uploads/
+
+# Fichiers temporaires
+tmp/
+*.log

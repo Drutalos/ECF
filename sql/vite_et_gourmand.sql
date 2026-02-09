@@ -1,5 +1,6 @@
-DROP DATABASE IF EXISTS vite_et_gourmand
-CREATE DATABASE vite_et_gourmand
+DROP DATABASE IF EXISTS vite_et_gourmand;
+CREATE DATABASE vite_et_gourmand;
+USE vite_et_gourmand;
 
 CREATE TABLE commande
 (
@@ -12,9 +13,9 @@ CREATE TABLE commande
     nombre_personne INT NOT NULL,
     prix_livraison DOUBLE NOT NULL,
     statut VARCHAR(50) NOT NULL,
-    pret-materiel BOOL NOT NULL,
+    pret_materiel BOOL NOT NULL,
     restitution_materiel BOOL NOT NULL
-)
+);
 
 CREATE TABLE utilisateur
 (
@@ -26,13 +27,13 @@ CREATE TABLE utilisateur
     ville VARCHAR(50) NOT NULL,
     pays VARCHAR(50) NOT NULL,
     adresse_postale VARCHAR(50) NOT NULL
-)
+);
 
 CREATE TABLE role 
 (
     role_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     libelle VARCHAR(50) NOT NULL
-)
+);
 
 CREATE TABLE avis
 (
@@ -40,7 +41,7 @@ CREATE TABLE avis
     note VARCHAR(50) NOT NULL,
     description VARCHAR(50) NOT NULL,
     statut VARCHAR(50) NOT NULL
-)
+);
 
 CREATE TABLE menu 
 (
@@ -51,23 +52,23 @@ CREATE TABLE menu
     regime VARCHAR(50) NOT NULL,
     description VARCHAR(50) NOT NULL,
     quantite_restante INT NOT NULL
-)
+);
 
 CREATE TABLE plat
 (
     plat_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     titre_plat VARCHAR(50) NOT NULL,
     photo BLOB
-)
+);
 
 CREATE TABLE allergene
 (
-    allergene-id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    allergene_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     libelle VARCHAR(50) NOT NULL
-)
+);
 
 CREATE TABLE theme
 (
     theme_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     libelle VARCHAR(50) NOT NULL
-)
+);

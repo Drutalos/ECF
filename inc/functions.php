@@ -1,7 +1,7 @@
 <?php
 
 // inc/functions.php
-require_once DIR . '/config.php';
+require_once __DIR__ . '/config.php';
 
 //récupération des horaires
 function get_horaires_mongo():mixed{
