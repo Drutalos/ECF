@@ -6,14 +6,14 @@ img {
 
 /* === VARIABLES ET RESET === */
 :root {
-    --primary-color: #c7956d;        
-    --secondary-color: #8b6f47;      
-    --accent-color: #d4a574;         
-    --dark-color: #3d3027;           
-    --light-bg: #faf7f2;            
+    --primary-color: #c7956d;
+    --secondary-color: #8b6f47;
+    --accent-color: #d4a574;
+    --dark-color: #3d3027;
+    --light-bg: #faf7f2;
     --white: #ffffff;
-    --warm-white: #fffbf5;           
-    --text-light: #6b5d52;           
+    --warm-white: #fffbf5;
+    --text-light: #6b5d52;
     --shadow: 0 4px 20px rgba(139, 111, 71, 0.1);
     --shadow-hover: 0 8px 30px rgba(139, 111, 71, 0.2);
     --border-radius: 12px;
@@ -103,6 +103,13 @@ strong {
     font-family: 'Georgia', serif;
     letter-spacing: 2px;
     transition: color 0.3s ease;
+}
+
+.logo img {
+    height: 8rem;
+    /* ajuste selon ton logo */
+    width: auto;
+    display: block;
 }
 
 .logo a:hover {
@@ -423,7 +430,7 @@ strong {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .footer {
         padding: 40px 20px 25px;
     }
@@ -485,7 +492,7 @@ strong {
         grid-template-columns: 1fr;
     }
 
-    .footer > div {
+    .footer>div {
         grid-template-columns: 1fr;
         gap: 40px;
     }
@@ -556,7 +563,8 @@ strong {
 .menu-photo {
     width: 180px;
     height: 180px;
-    min-width: 180px;  /* Empêche l'image de rétrécir */
+    min-width: 180px;
+    /* Empêche l'image de rétrécir */
     object-fit: cover;
     border-radius: var(--border-radius);
     border: 3px solid var(--primary-color);
@@ -577,7 +585,8 @@ strong {
 }
 
 .menu-content h2::after {
-    display: none;  /* Enlève le symbole ✦ pour les titres de menu */
+    display: none;
+    /* Enlève le symbole ✦ pour les titres de menu */
 }
 
 .menu-content ul {
@@ -609,14 +618,342 @@ strong {
         flex-direction: column;
         padding: 20px;
     }
-    
+
     .menu-photo {
         width: 100%;
         height: 200px;
         min-width: auto;
     }
-    
+
     .menu-content h2 {
         font-size: 1.5rem;
     }
+}
+
+/* === PAGE DÉTAIL MENU === */
+
+/* Section principale */
+.detail-menu {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 40px 30px;
+}
+
+/* Titre de la page */
+.detail-menu h2 {
+    text-align: left;
+    /* Aligné à gauche contrairement aux autres titres */
+}
+
+/* Photo principale du menu */
+.menu-detail-photo {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    /* Recadre l'image sans la déformer */
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    border: 3px solid var(--primary-color);
+}
+
+/* Bloc d'informations générales */
+.menu-info {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.menu-info p {
+    padding: 10px 0;
+    /* Ligne de séparation entre chaque info */
+    border-bottom: 1px solid rgba(199, 149, 109, 0.15);
+}
+
+/* Bloc conditions - mis en évidence comme demandé dans l'énoncé */
+.conditions {
+    background: #fff3cd;
+    /* Fond jaune clair pour attirer l'attention */
+    border-left: 5px solid var(--secondary-color);
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+}
+
+/* Section composition du menu */
+.menu-plats {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+/* Carte d'un plat */
+.plat {
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 4px solid var(--primary-color);
+    background: var(--light-bg);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+/* Badge type de plat (Entrée, Plat, Dessert) */
+.type-plat {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Nom du plat */
+.plat h4 {
+    margin: 10px 0 5px;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+/* Allergènes - mis en évidence */
+.allergenes {
+    color: #c0392b;
+    /* Rouge pour attirer l'attention */
+    font-size: 0.95rem;
+    margin-top: 8px;
+}
+
+/* Bouton commander */
+.btn-commander {
+    display: block;
+    width: fit-content;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--white);
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 30px auto;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(199, 149, 109, 0.3);
+}
+
+.btn-commander:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(199, 149, 109, 0.4);
+}
+
+/* Bouton voir détail dans la liste */
+.btn-detail {
+    display: inline-block;
+    background: transparent;
+    color: var(--primary-color);
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid var(--primary-color);
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-detail:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-detail-photo {
+        height: 250px;
+    }
+
+    .detail-menu {
+        padding: 20px 15px;
+    }
+
+    .btn-commander {
+        width: 100%;
+    }
+}
+
+/* === PAGES AUTHENTIFICATION (inscription & connexion) === */
+
+/* Section qui centre le formulaire verticalement */
+.auth-section {
+    min-height: 80vh;
+    /* Prend 80% de la hauteur de l'écran */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Conteneur blanc du formulaire */
+.auth-container {
+    background: var(--white);
+    padding: 50px 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 600px;
+    /* Largeur maximum du formulaire */
+    border: 1px solid rgba(199, 149, 109, 0.15);
+}
+
+.auth-container h2 {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+/* Bloc d'erreurs */
+.erreurs {
+    background: #fde8e8;
+    /* Fond rouge clair */
+    border-left: 4px solid #e74c3c;
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 25px;
+}
+
+.erreurs p {
+    color: #c0392b;
+    margin: 5px 0;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+/* Ligne avec deux champs côte à côte */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Deux colonnes égales */
+    gap: 20px;
+}
+
+/* Groupe label + input */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    /* Label au-dessus de l'input */
+    gap: 8px;
+}
+
+/* Labels */
+.form-group label {
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+}
+
+/* Champs de saisie */
+.form-group input {
+    padding: 12px 15px;
+    border: 2px solid rgba(199, 149, 109, 0.3);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    /* Utilise la même police que le reste du site */
+    transition: border-color 0.3s ease;
+    background: var(--warm-white);
+}
+
+/* Effet focus sur les inputs */
+.form-group input:focus {
+    outline: none;
+    /* Supprime le contour bleu par défaut */
+    border-color: var(--primary-color);
+    background: var(--white);
+}
+
+/* Texte d'aide sous le champ mot de passe */
+.form-group small {
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+/* Bouton de soumission */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--white);
+    border: none;
+    /* Supprime la bordure par défaut des boutons */
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    /* Curseur en forme de main au survol */
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    font-family: inherit;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(199, 149, 109, 0.4);
+}
+
+/* Lien connexion/inscription en bas du formulaire */
+.auth-link {
+    text-align: center;
+    margin-top: 25px;
+    color: var(--text-light);
+}
+
+.auth-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 30px 20px;
+    }
+
+    /* Sur mobile, les deux champs passent l'un sous l'autre */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Message de succès (après inscription) */
+.succes {
+    background: #d4edda; /* Fond vert clair */
+    border-left: 4px solid #28a745;
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 25px;
+    color: #155724; /* Vert foncé pour le texte */
+}
+
+/* Lien mot de passe oublié */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 20px;
+    margin-top: -10px; /* Rapproche du champ mot de passe */
+}
+
+.forgot-password a {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: var(--primary-color);
 }
